@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"supermall.orders"}],"uuid":"bf7c9264d9aa4c88a4e6dc5a789a6990"}
