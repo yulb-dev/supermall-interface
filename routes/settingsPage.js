@@ -18,12 +18,12 @@ router.post('/', (req, res) => {
         rs.once('close', function () {
             //当可读流关闭时，关闭可写流流
             ws.end()
-            User.findByIdAndUpdate(fields.id, { avatar: 'http://47.105.222.69:6060/img/userAvatar/' + name, name: fields.name }, (err, data) => {
+            User.findByIdAndUpdate(fields.id, { avatar: 'http://localhost:6060/img/userAvatar/' + name, name: fields.name }, (err, data) => {
                 if (err) {
                     res.send({ err, status: 200 })
                 }
                 else {
-                    res.send({ name: fields.name, avatar: 'http://47.105.222.69:6060/img/userAvatar/' + name })
+                    res.send({ name: fields.name, avatar: 'http://localhost:6060/img/userAvatar/' + name })
                 }
             })
         })

@@ -6,7 +6,7 @@ const session = require('express-session')
 const cors = require('cors');
 
 var corsOptions = {
-    origin: 'http://47.105.222.69:8080',
+    origin: 'http://localhost:8080',
     credentials: true,
     // maxAge: '1728000'
     // //这一项是为了跨域专门设置的
