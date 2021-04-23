@@ -37,7 +37,7 @@ app.all('*', function (req, res, next) {
 //静态资源
 app.use("/img", express.static("./public/img"));
 
-//配置body-parsee 中间件
+//配置body-parser 中间件
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //挂载路由
