@@ -5,7 +5,7 @@ const router = require('./routes/router')
 const session = require('express-session')
 const cors = require('cors');
 
-var corsOptions = {
+const corsOptions = {
     origin: 'http://localhost:8080',
     credentials: true,
     // maxAge: '1728000'

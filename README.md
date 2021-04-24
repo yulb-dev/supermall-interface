@@ -1,18 +1,37 @@
-# supermall-interface
+# 前言
 
-## 记得看这里！
-```
-因服务器到期，请想要启动项目的朋友进行以下操作（=_=）...
-```
+这是[supermall](https://github.com/yulb-dev/supermall)的后台接口项目地址
 
-## 数据库操作
+## 技术栈
+
 ```
-下载data里的数据库备份文件在本机数据库上进行恢复操作，启动mongodb数据库服务
-记得将model/openfw.js里的数据库连接操作改为连接本地服务器
-启动node项目
+node + express + mongodb(mongoose)
 ```
 
-## 前台vue项目需要进行的操作
+## 项目运行
+
+运行前:
+1、请确保你已经启动 mongodb 数据库服务并恢复数据库文件
+
 ```
-修改前台vue代码的所有axios请求（主要在network文件夹下），端口号改为本机端口 localhost:6060
+//恢复数据库文件：
+mongorestore -h localhost:27017 -d supermall --dir <path>
+/*
+<path>：
+mongorestore 最后的一个参数，设置备份数据所在位置，例如：c:\supermall-api\data\dump\supermall
+*/
 ```
+
+2、项目运行：
+
+```
+git clone https://github.com/yulb-dev/supermall-interface.git
+
+cd supermall-interface
+
+npm install
+
+node index.js
+```
+
+3、注意检查 "/index.js" 里的 corsOptions 的"origin"值，始终与前端项目地址保持一致，因为这涉及到跨域问题
